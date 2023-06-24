@@ -6,7 +6,6 @@ Django Social Media App is a web application built with Django that allows users
 
 - User registration and login
 - Create, edit, and delete posts
-- Like and comment on posts
 - User profile page
 
 ## Installation
