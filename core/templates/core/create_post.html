@@ -1,0 +1,12 @@
+<!-- core/templates/core/create_post.html -->
+
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">Create Post</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">Create</button>
+    </form>
+{% endblock %}

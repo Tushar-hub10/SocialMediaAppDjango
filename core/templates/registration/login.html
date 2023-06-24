@@ -1,0 +1,13 @@
+<!-- core/templates/registration/login.html -->
+
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">User Login</h1>
+    <form method="POST" action="{% url 'login' %}?next={{ request.GET.next }}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">Login</button>
+    </form>
+    <p class="mt-4">Don't have an account yet? <a href="{% url 'register' %}" class="text-blue-500">Register</a></p>
+{% endblock %}
